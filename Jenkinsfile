@@ -32,12 +32,12 @@ pipeline {
     post {
     
         success {
-            sh "curl -X POST https://maker.ifttt.com/trigger/jenkins_success/with/key/geqAu4WK7xgLcr4md038_CrKCsXrRjZbJ9MsQBwPLg9"
+            sh "${successAction}"
         
         }
     
         failure {
-            sh "curl -X POST https://maker.ifttt.com/trigger/jenkins_failure/with/key/geqAu4WK7xgLcr4md038_CrKCsXrRjZbJ9MsQBwPLg9"
+		sh "${failureAction}"
         
         }
     }
