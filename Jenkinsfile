@@ -9,12 +9,14 @@ def loadValuesYaml(x){
 }
 pipeline {
     environment {
-        imageName = "chrisgallivan/automate-all-the-things-docker"
-        registryCredential = 'docker_hub'
-        dockerImage = ''
-        BACKEND_FILE = "terraformConfig.tf"
-        BACKEND_PATH = "global/s3/terraform.tfstate"
-	    BUILD_USER = ''    
+        imageName = loadValuesYaml('imageName')
+        registryCredential = loadValuesYaml('registryCredential')
+        dockerImage = loadValuesYaml('dockerImage')
+        backendFile = loadValuesYaml('backendFile')
+        backendPath = loadValuesYaml('backendPath')
+	successAction = loadValuesYaml('successAction')
+	failureAction = loadValuesYaml('failureAction')    
+	   
     }
     agent any
     stages {
