@@ -1,4 +1,5 @@
 appName: "BroncoMexico"
+imageName: "chrisgallivan/automate-all-the-things-docker"
 environments: 
   - name: dev
     credentialId: DryRun
