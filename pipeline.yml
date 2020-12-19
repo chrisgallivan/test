@@ -1,9 +1,11 @@
-appName: "BroncoMexico"
 imageName: "chrisgallivan/automate-all-the-things-docker"
-environments: 
-  - name: dev
-    credentialId: DryRun
-platform: "N/A"
-terraform: true
-emailList: ""
-hangoutsToken: "vCgad3N0mJFW-ryyFWCEx0jM2"
+bucketName: ""
+backendFile: "terraformConfig.tf"
+backendPath: "global/s3/terraform.tfstate"
+registryCredential: "docker_hub"
+slackToken: ""
+slackChannel: "general-old"
+successAction: "curl -X POST https://maker.ifttt.com/trigger/jenkins_success/with/key/geqAu4WK7xgLcr4md038_CrKCsXrRjZbJ9MsQBwPLg9"
+failureAction: "curl -X POST https://maker.ifttt.com/trigger/jenkins_failure/with/key/geqAu4WK7xgLcr4md038_CrKCsXrRjZbJ9MsQBwPLg9"
+
+
