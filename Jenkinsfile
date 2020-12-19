@@ -26,7 +26,7 @@ pipeline {
             steps {
 		    slackSend channel: "${slackChannel}",
                     color: COLOR_MAP[currentBuild.currentResult],
-	            message: "${slackMessage}"
+	            message: "$slackMessage"
             }
         }    
     }
