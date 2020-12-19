@@ -3,6 +3,10 @@ def COLOR_MAP = [
     'FAILURE': 'danger',
 ]
 
+def loadValuesYaml(x){
+  def valuesYaml = readYaml (file: './pipeline.yml')
+  return valuesYaml[x];
+}
 pipeline {
     environment {
         imageName = "chrisgallivan/automate-all-the-things-docker"
